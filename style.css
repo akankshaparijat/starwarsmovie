@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+.navbarContainer {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: 'Sen', sans-serif;
+}
+
+.logoContainer {
+    flex: 2;
+}
+
+.logo {
+    font-size: 30px;
+    color: rgb(196, 7, 7);
+}
+
+.menuContainer {
+    flex: 6;
+    color: white;
+}
+
+.menuListItem.active {
+    font-weight: bold;
+}
+
+.menuList {
+    display: flex;
+    list-style: none;
+}
+
+.menuListItem {
+    margin: 30px;
+    cursor: pointer;
+}
+
+.profileContainer {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profileTextContainer {
+    margin: 0 20px;
+}
+
+.profilePicture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.toggleIcon {
+    color: goldenrod;
+}
+
+.toggleBall {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.sidebar {
+    width: 50px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.leftMenuIcon {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+
+}
+
+.container {
+    min-height: calc(100vh - 50px);
+    background-color: #151515;
+    color: white;
+}
+
+.contentContainer {
+    margin-left: 50px;
+}
+
+.featuredContent {
+    height: 80vh;
+    padding: 50px;
+    
+}
+
+.featuredTitle {
+    width: 200px;
+}
+
+.featuredhead{
+    width: 1000px;
+    color:#fff;
+    margin: 30px 0;
+    font-size: 80px;
+}
+
+.featuredDesc {
+    width: 500px;
+    color: lightgray;
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+.featuredButton {
+    background-color: rgb(196, 7, 7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.featuredButtons {
+    background-color: #151515;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.movieListContainer {
+    padding: 25 5px;
+}
+
+.movieListWrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movieList {
+    display: flex;
+    height: 300px;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movieListItem {
+    margin-right: 30px;
+    position: relative;
+}
+
+.movieListItem:hover .movieListItemImg {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movieListItem:hover .movieListItemTitle,
+.movieListItem:hover .movieListItemDesc,
+.movieListItem:hover .movieListItemButton {
+    opacity: 1;
+}
+
+.movieListItemImg {
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: 1s all ease-in-out;
+    border-radius: 20px;
+}
+
+.movieListItemTitle {
+    background-color: black;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 26px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 30px;
+    width: 200px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movieListItemDesc {
+    background-color: rgb(196, 7, 7);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    position: absolute;
+    top: 40%;
+    left: 30px;
+    width: 200px;
+    opacity: 0;
+}
+
+.movieListItemButton {
+    padding: 10px;
+    background-color:  rgb(196, 7, 7);
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    opacity: 0;
+}
+
+.arrow {
+    font-size: 60px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.container.active {
+    background-color: white;
+}
+
+.movieListTitle.active {
+    color: black;
+}
+
+.navbarContainer.active {
+    background-color: white;
+    color: black;
+}
+
+.sidebar.active {
+    background-color: white;
+}
+
+.leftMenuIcon.active{
+    color: black;
+}
+
+.toggle.active {
+    background-color: black;
+}
+
+.toggleBall.active {
+    background-color: white;
+    transform: translateX(-20px);
+}
+
+.menuListItem.active {
+    color: black;
+}
+
+
+
+@media only screen and (max-width: 940px) {
+    .menuContainer {
+        display: none;
+    }
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgb(60, 60, 58);
+}
+.footer h7{
+margin-bottom: 25px;
+margin-top: 20px;
+font-weight: 600;
+color: #fff;
+}    
+.footer p3{
+font-size: 14px;
+color: #fff;
+}
+.icons .fa-brands{
+color: rgb(196, 7, 7);
+margin: 0 13px;
+cursor: pointer;
+padding: 18px 0;
+}
